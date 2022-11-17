@@ -12,21 +12,30 @@ class TestNumStack {
   @Test
   @BeforeEach
   void testClass() {
-    // Test 1
+
     stack = new NumStack();
 
 
   }
 
   @Test
-  @BeforeEach
   void testSize() {
-    // Test 2
+
     assertEquals(stack.size(), 0, "Check if a newly created stack is empty");
 
 
+  }
+  
+  @Test 
+  void testPush() {
+    stack.push(2.1f);
+    assertEquals(stack.size(), 1, "Test to see if push increases size of stack");
+
+    
   }
 
 
 
 }
+
+

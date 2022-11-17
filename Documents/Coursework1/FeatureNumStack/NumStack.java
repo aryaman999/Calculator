@@ -28,7 +28,7 @@ public class NumStack {
     return size;
   }
 
-  
+
   /**
    * A getter method to get numStack.
    *
@@ -48,7 +48,18 @@ public class NumStack {
 
 
 
+  /**
+   * Pushes value to the top of stack.
+   */
+  public void push(float value) {
+    numStack.push(new Entry(value));
+    size = size + 1;
+
+
+
+  }
+
+
+
 }
-
-
 
