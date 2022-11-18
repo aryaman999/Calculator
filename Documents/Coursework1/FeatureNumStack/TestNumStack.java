@@ -27,26 +27,32 @@ class TestNumStack {
 
 
   }
-  
-  @Test 
+
+  @Test
   void testPush() {
     stack.push(2.1f);
     assertEquals(stack.size(), 1, "Test to see if push increases size of stack");
 
-    
+
   }
-  
-  @Test 
+
+  @Test
   void testEmptyPop() {
     assertThrows(EmptyStackException.class, () -> stack.pop(),
         "You cant pop from empty stack it should throw empty stack exception");
 
-    
+
   }
 
-  
-  
-  
+  @Test
+  void testPushthenPop() {
+    stack.push(4.5f);
+    assertEquals(stack.pop(), 4.5f, "pushing five into stack and popping it to get five as return");
+    assertThrows(EmptyStackException.class, () -> stack.pop(), "pop and pop should give exception");
+
+  }
+
+
 
 }
 
