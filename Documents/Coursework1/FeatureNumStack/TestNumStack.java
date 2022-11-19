@@ -51,6 +51,22 @@ class TestNumStack {
     assertThrows(EmptyStackException.class, () -> stack.pop(), "pop and pop should give exception");
 
   }
+  
+  @Test
+  void testMultiplePushAndPop() {
+    @SuppressWarnings("unused")
+    Entry entry;
+    for (int i = 0; i < 11; i++) {
+      entry = new Entry("Testing" + i);
+      stack.push(i); // testing to see if its possible to push multiple times
+    }
+
+    for (int i = 10; i > 0; i--) {
+      stack.pop(); // testing to see if its possible to push multiple times
+
+    }
+
+  }
 
 
 
