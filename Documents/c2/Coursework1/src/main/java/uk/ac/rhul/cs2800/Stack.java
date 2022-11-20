@@ -62,6 +62,16 @@ public class Stack {
 
 
   }
+  
+  /**
+   * Returns a boolean true or false if stack is empty or not.
+   *
+   * @return size() to see if it's 0 or not
+   */
+  public boolean isEmpty() {
+    
+    return size() <= 0;
+  }
 
 
 }

@@ -107,6 +107,12 @@ class TestStack {
     // testTop() returns newest entry
 
   }
+  
+  @Test
+  void testIsEmpty() {
+    assertEquals(stack.isEmpty(), true, "Test to see if newly stack created is empty");
+    // created a boolean method in stack class following TDD cycle to check if stack is empty
+  }
 
 
 
