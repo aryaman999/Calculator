@@ -1,5 +1,8 @@
 package uk.ac.rhul.cs2800;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +22,14 @@ class TestOpStack {
 
 
   }
-
+  
+  @Test
+  void testPush() {
+    stack.push(Symbol.TIMES);
+    assertFalse(stack.isEmpty(), "Test to see if stack with one element is not outputted as empty");
 
   }
+
+
+  
 }
