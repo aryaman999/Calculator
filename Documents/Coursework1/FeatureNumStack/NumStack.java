@@ -9,8 +9,6 @@ import java.util.EmptyStackException;
  */
 public class NumStack {
 
-  private int size = 0;
-
   private Stack numStack;
 
   /**
@@ -22,32 +20,14 @@ public class NumStack {
 
 
   /**
-   * Check if numStack is empty.
+   * Checks whether numStack is empty or not.
    *
-   * @return size which has a initial size of 0.
+   * @return true if numStack is empty and false if numStack is not empty.
    */
-  public int size() {
-    return size;
+  public boolean isEmpty() {
+
+    return numStack.isEmpty();
   }
-
-
-  /**
-   * A getter method to get numStack.
-   *
-   * @return numStack
-   */
-  public Stack getNumStack() {
-    return numStack;
-  }
-
-
-  /**
-   * A setter method to set or update value.
-   */
-  public void setNumStack(Stack numStack) {
-    this.numStack = numStack;
-  }
-
 
 
   /**
@@ -57,9 +37,6 @@ public class NumStack {
    */
   public void push(float value) {
     numStack.push(new Entry(value));
-    size = size + 1;
-
-
 
   }
 

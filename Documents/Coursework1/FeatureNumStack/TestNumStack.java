@@ -1,13 +1,15 @@
 package uk.ac.rhul.cs2800;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.EmptyStackException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-
+// Tests have been implemented from stack class
 class TestNumStack {
   NumStack stack;
 
@@ -21,9 +23,9 @@ class TestNumStack {
   }
 
   @Test
-  void testSize() {
+  void testIsEmpty() {
 
-    assertEquals(stack.size(), 0, "Check if a newly created stack is empty");
+    assertEquals(stack.isEmpty(), true, "Check if a newly created stack is empty");
 
 
   }
@@ -31,7 +33,7 @@ class TestNumStack {
   @Test
   void testPush() {
     stack.push(2.1f);
-    assertEquals(stack.size(), 1, "Test to see if push increases size of stack");
+    assertFalse(stack.isEmpty(), "Test to see if stack with one element is not outputted as empty");
 
 
   }
@@ -51,20 +53,19 @@ class TestNumStack {
     assertThrows(EmptyStackException.class, () -> stack.pop(), "pop and pop should give exception");
 
   }
-  
+
   @Test
   void testMultiplePushAndPop() {
-    @SuppressWarnings("unused")
-    Entry entry;
-    for (int i = 0; i < 11; i++) {
-      entry = new Entry("Testing" + i);
+    for (float i = 0; i < 11; i++) {
       stack.push(i); // testing to see if its possible to push multiple times
     }
 
-    for (int i = 10; i > 0; i--) {
-      stack.pop(); // testing to see if its possible to push multiple times
-
+    for (float i = 10; i >= 0; i--) {
+      assertEquals(stack.pop(), i, "test to see if elements pushed are stored properly in stack");
     }
+    assertTrue(stack.isEmpty());
+
+
 
   }
 
