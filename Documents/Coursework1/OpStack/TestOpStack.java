@@ -11,6 +11,14 @@ class TestOpStack {
   void testClass() {
     // creating a new stack to pass test using TDD cycle
     stack = new OpStack();
+    
+  @Test
+  void testIsEmpty() {
+
+    assertEquals(stack.isEmpty(), true, "Check if a newly created stack is empty");
+
+
+  }
 
 
   }
