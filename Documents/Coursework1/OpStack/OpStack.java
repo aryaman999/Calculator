@@ -3,7 +3,7 @@ package uk.ac.rhul.cs2800;
 import java.util.EmptyStackException;
 
 /**
- * The OpStack class contains a opStack.
+ * The OpStack class contains a stack of Symbol type Entry Objects such as TIMES,DIVIDE,PLUS,MINUS.
  *
  * @author Aryaman Rawat
  *
@@ -29,11 +29,11 @@ public class OpStack {
   /**
    * Pushes symbol to the top of stack.
    *
-   * @param object is used to push symbol type such as ADD,SUBTRACT,TIMES,DIVIDE into top of
-   *        opStack.
+   * @param symbol is used to push on top of the stack.
+   * 
    */
-  public void push(Symbol object) {
-    opStack.push(new Entry(object));
+  public void push(Symbol symbol) {
+    opStack.push(new Entry(symbol));
 
   }
 
@@ -53,5 +53,4 @@ public class OpStack {
 
 
 }
-
 
