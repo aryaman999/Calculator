@@ -36,5 +36,22 @@ public class OpStack {
     opStack.push(new Entry(object));
 
   }
-  
+
+
+  /**
+   * Removes number at top of numStack and returns it.
+   *
+   * @return the number on top of numStack
+   * @throws EmptyStackException if popped from a empty numStack.
+   * 
+   */
+  public float pop() throws EmptyStackException {
+
+    return opStack.pop().getValue();
+  }
+
+
+
 }
+
+

@@ -14,7 +14,9 @@ class TestOpStack {
   void testClass() {
     // creating a new stack to pass test using TDD cycle
     stack = new OpStack();
-    
+  }
+
+
   @Test
   void testIsEmpty() {
 
@@ -22,7 +24,7 @@ class TestOpStack {
 
 
   }
-  
+
   @Test
   void testPush() {
     stack.push(Symbol.TIMES);
@@ -31,5 +33,7 @@ class TestOpStack {
   }
 
 
-  
+
 }
+
+
