@@ -39,15 +39,15 @@ public class OpStack {
 
 
   /**
-   * Removes number at top of numStack and returns it.
+   * Removes the symbol at top of Stack and returns it.
    *
-   * @return the number on top of numStack
-   * @throws EmptyStackException if popped from a empty numStack.
+   * @return the Symbol on top of numStack
+   * @throws EmptyStackException if popped from a empty Stack.
    * 
    */
-  public float pop() throws EmptyStackException {
+  public Symbol pop() throws EmptyStackException {
 
-    return opStack.pop().getValue();
+    return opStack.pop().getSymbol();
   }
 
 

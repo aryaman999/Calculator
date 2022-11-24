@@ -41,6 +41,13 @@ class TestOpStack {
 
   }
 
+  @Test
+  void testPushthenPop() {
+    stack.push(Symbol.PLUS);
+    assertEquals(stack.pop(), Symbol.PLUS, "test to see if popping gives same pushed operator");
+    assertThrows(EmptyStackException.class, () -> stack.pop(), "pop and pop should give exception");
+
+  }
 
 
 }
