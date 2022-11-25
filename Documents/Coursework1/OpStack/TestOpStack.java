@@ -3,6 +3,7 @@ package uk.ac.rhul.cs2800;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.EmptyStackException;
 import org.junit.jupiter.api.BeforeEach;
@@ -49,6 +50,23 @@ class TestOpStack {
 
   }
 
+  @Test
+  void testMultiplePushAndPop() {
+
+    Symbol[] values = Symbol.values();
+    for (Symbol i : values) {
+      stack.push(i);
+    }
+    for (int i = values.length - 1; i >= 0; i--) {
+      assertEquals(stack.pop(), values[i],
+          "test to see if elements pushed are stored properly in stack");
+    }
+    assertTrue(stack.isEmpty(),
+        "test to show isEmpty() method works properly after mulitple push and pops");
+
+
+
+  }
 
 }
 
