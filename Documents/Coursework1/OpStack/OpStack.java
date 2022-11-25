@@ -50,6 +50,16 @@ public class OpStack {
     return opStack.pop().getSymbol();
   }
 
+  /**
+   * Returns Symbol at top of stack without removing itself.
+   *
+   * @return EmptyStackException if called a stack that is empty.
+   */
+  public Symbol top() throws EmptyStackException {
+
+    return opStack.top().getSymbol();
+  }
+
 
 
 }

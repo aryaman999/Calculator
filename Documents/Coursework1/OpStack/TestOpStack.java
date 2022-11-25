@@ -68,6 +68,19 @@ class TestOpStack {
 
   }
 
-}
+  @Test
+  void testTop() {
+    stack.push(Symbol.PLUS);
+    stack.push(Symbol.DIVIDE);
 
+    assertEquals(stack.top(), Symbol.DIVIDE, "Test to see if top returns newest entry");
+    assertEquals(stack.pop(), Symbol.DIVIDE, "Test to see if top returns newest entry");
+    assertEquals(stack.pop(), Symbol.PLUS, "Test to see if top returns newest entry");
+
+
+    // Used TDD approach to get this test case working as expected
+    // testTop() returns newest entry
+
+  }
+}
 
