@@ -34,10 +34,10 @@ public class StrStack {
   /**
    * Pushes value to the top of stack.
    *
-   * @param value is the string pushed into top of strStack.
+   * @param string is the string pushed into top of strStack.
    */
-  public void push(String value) {
-    strStack.push(new Entry(value));
+  public void push(String string) {
+    strStack.push(new Entry(string));
 
   }
 
