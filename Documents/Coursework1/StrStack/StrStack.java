@@ -27,3 +27,16 @@ public class StrStack {
 
     return strStack.isEmpty();
   }
+
+
+  /**
+   * Pushes value to the top of stack.
+   *
+   * @param value is the string pushed into top of strStack.
+   */
+  public void push(String value) {
+    strStack.push(new Entry(value));
+
+  }
+
+}
