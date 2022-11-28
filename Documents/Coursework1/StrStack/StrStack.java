@@ -1,5 +1,7 @@
 package uk.ac.rhul.cs2800;
 
+import java.util.EmptyStackException;
+
 /**
  * The StrStack class contains strStack.
  *
@@ -37,6 +39,19 @@ public class StrStack {
   public void push(String value) {
     strStack.push(new Entry(value));
 
+  }
+
+
+  /**
+   * Removes string at top of strStack and returns it.
+   *
+   * @return the string on top of strStack
+   * @throws EmptyStackException if popped from a empty strStack.
+   * 
+   */
+  public float pop() throws EmptyStackException {
+
+    return strStack.pop().getValue();
   }
 
 }
