@@ -49,9 +49,11 @@ public class StrStack {
    * @throws EmptyStackException if popped from a empty strStack.
    * 
    */
-  public float pop() throws EmptyStackException {
+  public String pop() throws EmptyStackException {
 
-    return strStack.pop().getValue();
+    return strStack.pop().getString();
   }
+
+
 
 }

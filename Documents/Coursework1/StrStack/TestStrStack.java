@@ -45,4 +45,17 @@ class TestStrStack {
 
 
   }
+
+
+  @Test
+  void testPushthenPop() {
+    stack.push("hello");
+    assertEquals(stack.pop(), "hello",
+        "pushing string into stack and popping it to get (hello) as return");
+    assertThrows(EmptyStackException.class, () -> stack.pop(), "pop and pop should give exception");
+
+  }
+
+
+
 }
