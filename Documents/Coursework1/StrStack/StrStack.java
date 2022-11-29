@@ -32,7 +32,7 @@ public class StrStack {
 
 
   /**
-   * Pushes value to the top of stack.
+   * Pushes string to the top of stack.
    *
    * @param string is the string pushed into top of strStack.
    */

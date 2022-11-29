@@ -58,4 +58,18 @@ class TestStrStack {
 
 
 
+  @Test
+  void testMultiplePushAndPop() {
+    stack.push("hello");
+    stack.push("5+5");
+    stack.push("5*4");
+    stack.push("exit");
+    stack.pop();
+    stack.pop();
+    // Test to see if multiple push and pop works using TDD approach.
+
+  }
+
+
+
 }
