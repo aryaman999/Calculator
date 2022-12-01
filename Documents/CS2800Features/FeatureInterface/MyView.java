@@ -1,22 +1,35 @@
 package uk.ac.rhul.cs2800;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
 
+/**
+ * This class handles actions for the GUI interface.
+ *
+ * @author Aryaman Rawat
+ */
 public class MyView {
+
+  @FXML
+  private RadioButton infix;
+
+  @FXML
+  private TextField input;
 
   @FXML
   private Label label;
 
   @FXML
-  private Button mainButton;
+  private Label label1;
 
   @FXML
-  void isPressed(ActionEvent event) {
-    label.setText("pressed");
+  private TextField result;
 
-  }
+  @FXML
+  private RadioButton reverse;
 
 }
+
+
