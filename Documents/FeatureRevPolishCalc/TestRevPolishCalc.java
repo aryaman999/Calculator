@@ -83,4 +83,14 @@ class TestRevPolishCalc {
         "test to see if large number calculations throws error.");
 
   }
+
+  @Test
+  void testWrongOperandExpression() throws WrongExpression {
+    assertThrows(WrongExpression.class, () -> calculator.evaluate("2 2 1 -"),
+        "Test that wrong expression is thrown on passing to many numbers.");
+
+    calculator = new RevPolishCalc();
+    assertThrows(WrongExpression.class, () -> calculator.evaluate("2 -"),
+        "Test that wrong expression is thrown on passing less operands");
+  }
 }
