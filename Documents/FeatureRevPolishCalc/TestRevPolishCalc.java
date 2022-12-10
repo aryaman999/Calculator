@@ -73,4 +73,14 @@ class TestRevPolishCalc {
 
 
   }
+
+
+  @Test
+  void testForOverflow() throws WrongExpression {
+    assertThrows(WrongExpression.class,
+        () -> calculator
+            .evaluate("143536453534534534534534345346 456456456456546456546456456454567 *"),
+        "test to see if large number calculations throws error.");
+
+  }
 }
