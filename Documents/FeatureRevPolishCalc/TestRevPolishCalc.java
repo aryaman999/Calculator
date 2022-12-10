@@ -46,4 +46,22 @@ class TestRevPolishCalc {
 
 
   }
+
+
+  @Test
+  void testDoubleDigitValues() throws WrongExpression {
+    assertEquals(calculator.evaluate("20 40 +"), 60f,
+        "test should give right answer as expression is valid");
+
+    assertEquals(calculator.evaluate("25 12 -"), 13f,
+        "test should give right answer as expression is valid");
+
+    assertEquals(calculator.evaluate("25 10 *"), 250f,
+        "test should give right answer as expression is valid");
+
+    assertEquals(calculator.evaluate("50 10 /"), 5f,
+        "test should give right answer as expression is valid");
+
+
+  }
 }
