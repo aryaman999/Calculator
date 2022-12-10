@@ -1,6 +1,7 @@
 package uk.ac.rhul.cs2800;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -34,6 +35,14 @@ class TestRevPolishCalc {
         "test should give right answer as expression is valid");
     assertEquals(calculator.evaluate("6 2 /"), 3f,
         "test should give right answer as expression is valid");
+
+
+  }
+
+  @Test
+  void testEmptyExpression() {
+    assertThrows(WrongExpression.class, () -> calculator.evaluate(""),
+        "test to see if passing invalid expression throws error.");
 
 
   }
