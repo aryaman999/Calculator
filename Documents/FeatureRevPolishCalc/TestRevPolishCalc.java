@@ -1,5 +1,7 @@
 package uk.ac.rhul.cs2800;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,6 +16,7 @@ class TestRevPolishCalc {
 
   }
 
-
-
-}
+  @Test
+  void testSingle() throws WrongExpression {
+    assertEquals(calculator.evaluate("2 4 +"), 6f,
+        "test should give right answer as expression is valid");
