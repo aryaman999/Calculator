@@ -64,4 +64,13 @@ class TestRevPolishCalc {
 
 
   }
+
+  @Test
+  void testDivideByZero() throws WrongExpression {
+    assertThrows(WrongExpression.class, () -> calculator.evaluate("1 0 /"),
+        "test to see if dividing by zero throws error.");
+
+
+
+  }
 }
