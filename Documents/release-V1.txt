@@ -1,0 +1,8 @@
+Release V.1.0.0
+
+December 10,2022
+
+This release has a improved GUI which the user can now interact with.
+
+Bug Fixes:
+*Improved GUI by adding better buttons and input buttons for user to interact with the calculator.
