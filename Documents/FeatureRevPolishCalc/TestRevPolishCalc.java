@@ -93,4 +93,15 @@ class TestRevPolishCalc {
     assertThrows(WrongExpression.class, () -> calculator.evaluate("2 -"),
         "Test that wrong expression is thrown on passing less operands");
   }
+
+
+  @Test
+  void testComplexExpression() throws WrongExpression {
+    assertEquals(calculator.evaluate("7 2 + 1 3 + *"), 36f,
+        "test should give right answer as expression is valid");
+
+  }
+
+
+
 }
