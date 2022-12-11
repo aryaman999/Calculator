@@ -4,4 +4,6 @@ This is a calculator project which uses reverse polish notation to evaluate user
 
 The user interface contains two types of calculator which user can use although they are not functional as of yet.The interface is run using compile javafx:run.
 
+This application is compatible will all current OS's like Windows,macOS and Linux.
+
 
