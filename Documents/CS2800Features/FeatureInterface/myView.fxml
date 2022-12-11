@@ -26,7 +26,6 @@
       </Button>
       <TextField fx:id="input" layoutX="121.0" layoutY="52.0" />
       <TextField fx:id="result" layoutX="121.0" layoutY="111.0" />
-      <RadioButton fx:id="infix" layoutX="22.0" layoutY="160.0" mnemonicParsing="false" text="Inflix" />
-      <RadioButton fx:id="reverse" layoutX="110.0" layoutY="160.0" mnemonicParsing="false" text="Reverse Polish" />
+      <RadioButton fx:id="reverse" layoutX="24.0" layoutY="167.0" mnemonicParsing="false" text="Reverse Polish" />
    </children>
 </Pane>

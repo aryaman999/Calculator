@@ -12,8 +12,6 @@ import javafx.scene.control.TextField;
  */
 public class MyView {
 
-  @FXML
-  private RadioButton infix;
 
   @FXML
   private TextField input;
